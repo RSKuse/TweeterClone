@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     lazy var twitterTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
+        tableView.separatorInset = UIEdgeInsets.zero
+        tableView.separatorColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1) 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
         
@@ -39,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(199.33)
+        return UITableView.automaticDimension
     }
     
     
