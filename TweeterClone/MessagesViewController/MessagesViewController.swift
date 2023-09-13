@@ -22,7 +22,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }()
     lazy var composeMessageImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Add Text Button-2")
+        let icon = UIImage(named: "Add Text Button-2") /// `icon_compose_message`
         button.setImage(icon, for: .normal)
         button.clipsToBounds = true
         button.imageView?.contentMode = .scaleAspectFit
@@ -43,7 +43,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     lazy var settingIconButton: UIButton = {
             let button = UIButton()
-            let icon = UIImage(named: "Settings Stroke Icon")
+            let icon = UIImage(named: "Settings Stroke Icon") /// `icon_settings` `ic_settings`
             button.setImage(icon, for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -56,18 +56,28 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         setupUI()
         handleRegisterCell()
         title = "Messages"
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
         let profileImageButton = UIBarButtonItem(customView: profileImageViewButton)
         let settingButton = UIBarButtonItem(customView: settingIconButton)
         navigationItem.leftBarButtonItem = profileImageButton
         navigationItem.rightBarButtonItem = settingButton
-
+        
+        // Note: Navigation Bar Icons only need the width and the height anchors
+        profileImageViewButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        profileImageViewButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        settingIconButton.widthAnchor.constraint(equalToConstant: 21).isActive = true
+        settingIconButton.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
     
     func setupUI() {
         view.addSubview(messageTableView)
         view.addSubview(composeMessageImageButton)
-        view.addSubview(profileImageViewButton)
-        view.addSubview(settingIconButton)
+        // view.addSubview(profileImageViewButton)
+        // view.addSubview(settingIconButton)
        
         messageTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         messageTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -76,41 +86,10 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         
         composeMessageImageButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
         composeMessageImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60).isActive = true
-        
-        
-        profileImageViewButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        profileImageViewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -6).isActive = true
-        profileImageViewButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
-        profileImageViewButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
-        
-        
-        settingIconButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        settingIconButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -12).isActive = true
-        settingIconButton.widthAnchor.constraint(equalToConstant: 21).isActive = true
-        settingIconButton.heightAnchor.constraint(equalToConstant: 21).isActive = true
-
-        
-        
     }
     
     func handleRegisterCell() {
         messageTableView.register(MessagesTableViewCell.self, forCellReuseIdentifier: "MessagesTableViewCellID")
-        
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let messageCell = tableView.dequeueReusableCell(withIdentifier: "MessagesTableViewCellID", for: indexPath) as! MessagesTableViewCell
-        return messageCell
-    }
-
-
 }
 
