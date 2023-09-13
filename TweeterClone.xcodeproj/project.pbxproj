@@ -17,6 +17,8 @@
 		F3840D642AABA62500882B06 /* TweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D632AABA62500882B06 /* TweetsTableViewCell.swift */; };
 		F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */; };
 		F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */; };
+		F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */; };
+		F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F3840D632AABA62500882B06 /* TweetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewCell.swift; sourceTree = "<group>"; };
 		F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsModelStruct.swift; sourceTree = "<group>"; };
 		F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsDatabase.swift; sourceTree = "<group>"; };
+		F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			children = (
 				F3840D4F2AAAE45500882B06 /* AppDelegate.swift */,
 				F3840D512AAAE45500882B06 /* SceneDelegate.swift */,
+				F3840D692AB2108700882B06 /* MessagesViewController */,
 				45A453762AAF9A6100FBB812 /* HomeViewController */,
 				F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */,
 				F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */,
@@ -85,6 +90,15 @@
 				F3840D5D2AAAE45800882B06 /* Info.plist */,
 			);
 			path = TweeterClone;
+			sourceTree = "<group>";
+		};
+		F3840D692AB2108700882B06 /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */,
+				F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */,
+			);
+			path = MessagesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +178,8 @@
 				F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */,
 				F3840D522AAAE45500882B06 /* SceneDelegate.swift in Sources */,
 				F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */,
+				F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */,
+				F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */,
 				F3840D642AABA62500882B06 /* TweetsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
