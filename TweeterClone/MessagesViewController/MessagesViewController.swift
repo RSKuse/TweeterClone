@@ -22,7 +22,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }()
     lazy var composeMessageImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Add Text Button-2") /// `icon_compose_message`
+        let icon = UIImage(named: "icon_compose_message") /// `icon_compose_message`
         button.setImage(icon, for: .normal)
         button.clipsToBounds = true
         button.imageView?.contentMode = .scaleAspectFit
@@ -42,13 +42,13 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }()
     
     lazy var settingIconButton: UIButton = {
-            let button = UIButton()
-            let icon = UIImage(named: "Settings Stroke Icon") /// `icon_settings` `ic_settings`
-            button.setImage(icon, for: .normal)
-            button.imageView?.contentMode = .scaleAspectFit
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
-        }()
+        let button = UIButton()
+        let icon = UIImage(named: "Settings Stroke Icon") /// `icon_settings` `ic_settings`
+        button.setImage(icon, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     
     override func viewDidLoad() {

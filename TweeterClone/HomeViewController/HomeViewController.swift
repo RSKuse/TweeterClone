@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }()
     lazy var composeTweetImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Add text button")
+        let icon = UIImage(named: "icon_compose_tweet")
         button.setImage(icon, for: .normal)
         button.clipsToBounds = true
         button.imageView?.contentMode = .scaleAspectFit
@@ -44,7 +44,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     lazy var featureStrokeIconButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Feature stroke icon") /// icon naming is `icon_feature_filter`
+        let icon = UIImage(named: "icon_filter") /// icon naming is `icon_feature_filter`
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -91,7 +91,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         twitterTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
         composeTweetImageButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
-        composeTweetImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60).isActive = true
+        composeTweetImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
     }
     
     // TODO: Move these to an extension

@@ -129,7 +129,8 @@ class TweetsTableViewCell: UITableViewCell {
     lazy var likedLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
-        label.attributedText = NSMutableAttributedString(string: "Kieron Dotson and Zack John liked", attributes:               [NSAttributedString.Key.kern: -0.15])
+        label.attributedText = NSMutableAttributedString(string: "Kieron Dotson and Zack John liked",
+                                                         attributes: [NSAttributedString.Key.kern: -0.15])
         label.text = "Kieron Dotson and Zack John liked"
         label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -209,20 +210,15 @@ class TweetsTableViewCell: UITableViewCell {
         shareButtonView.buttonImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
         
         likedStackView.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor, constant: -23).isActive = true
-        likedStackView.bottomAnchor.constraint(equalTo: userNameTimeStampStackView.topAnchor, constant: -5).isActive = true
-        likedStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
-        likedStackView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 10).isActive = true
+        likedStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         
-        downArrowIconImageButton.leftAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
+        downArrowIconImageButton.rightAnchor.constraint(equalTo: tweetLabel.rightAnchor).isActive = true
         downArrowIconImageButton.centerYAnchor.constraint(equalTo: userNameTimeStampStackView.centerYAnchor).isActive = true
-
-    
     }
+    
     required init?(coder: NSCoder) {
        fatalError("init(coder:) has not been implemented")
-        
     }
-    
     
 }
 
