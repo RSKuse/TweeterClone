@@ -49,7 +49,7 @@ class MessagesTableViewCell: UITableViewCell {
     }()
     
     lazy var userNameTimeStampStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, userNameLabel, timeStampLabel])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, userNameLabel])
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
@@ -78,6 +78,7 @@ class MessagesTableViewCell: UITableViewCell {
         contentView.addSubview(profileImageView)
         contentView.addSubview(userNameTimeStampStackView)
         contentView.addSubview(messageLabel)
+        contentView.addSubview(timeStampLabel)
 
         profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 55).isActive = true
@@ -85,18 +86,16 @@ class MessagesTableViewCell: UITableViewCell {
         profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32).isActive = true
 
         userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
-        userNameTimeStampStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
-        
-        
-        
+
         messageLabel.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor).isActive = true
-        messageLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.bottomAnchor, constant: 2).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.bottomAnchor, constant: -2).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
-        messageLabel.bottomAnchor.constraint(equalTo: contentView.topAnchor, constant: -30).isActive = true
-
-
-    
+        messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12).isActive = true
+   
+        timeStampLabel.centerYAnchor.constraint(equalTo: userNameTimeStampStackView.centerYAnchor).isActive = true
+        timeStampLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
+        
     }
     required init?(coder: NSCoder) {
        fatalError("init(coder:) has not been implemented")
