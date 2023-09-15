@@ -38,6 +38,12 @@ class TabBarController: UITabBarController {
         let messagesController = MessagesViewController()
         messagesController.tabBarItem = messagesTabBarItem
         
+        let searchTabBarItem = UITabBarItem(title: "Search",
+                                              image: UIImage(named: "icon_Search"),
+                                              selectedImage: UIImage(named: "icon_selected_search"))
+//        let messagesController = MessagesViewController()
+//        messagesController.tabBarItem = messagesTabBarItem
+        
         self.viewControllers = [homeViewController, messagesController]
         
     }
