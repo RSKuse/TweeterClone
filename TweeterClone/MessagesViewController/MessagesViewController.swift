@@ -43,7 +43,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     lazy var settingIconButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Settings Stroke Icon") /// `icon_settings` `ic_settings`
+        let icon = UIImage(named: "icon_setting") /// `icon_settings` `ic_settings`
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -60,24 +60,21 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func setupNavigationBar() {
-        let profileImageButton = UIBarButtonItem(customView: profileImageViewButton)
         let settingButton = UIBarButtonItem(customView: settingIconButton)
-        navigationItem.leftBarButtonItem = profileImageButton
-        navigationItem.rightBarButtonItem = settingButton
-        
-        // Note: Navigation Bar Icons only need the width and the height anchors
-        profileImageViewButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
-        profileImageViewButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
-        
         settingIconButton.widthAnchor.constraint(equalToConstant: 21).isActive = true
         settingIconButton.heightAnchor.constraint(equalToConstant: 21).isActive = true
+        navigationItem.rightBarButtonItem = settingButton
+        
+ 
+        let profileImageButton = UIBarButtonItem(customView: profileImageViewButton)
+        profileImageViewButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        profileImageViewButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        navigationItem.leftBarButtonItem = profileImageButton
     }
     
     func setupUI() {
         view.addSubview(messageTableView)
         view.addSubview(composeMessageImageButton)
-        // view.addSubview(profileImageViewButton)
-        // view.addSubview(settingIconButton)
        
         messageTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         messageTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true

@@ -83,7 +83,7 @@ class MessagesTableViewCell: UITableViewCell {
         profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 55).isActive = true
-        profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32).isActive = true
+        profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
 
         userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
