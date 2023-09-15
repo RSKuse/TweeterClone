@@ -61,8 +61,8 @@ class MessagesTableViewCell: UITableViewCell {
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
-        label.numberOfLines = 0
-        label.attributedText = NSMutableAttributedString(string: "You: I would greatly appreciate if you could retweet this if you think its worthy :)", attributes: [NSAttributedString.Key.kern: -0.3])
+        label.numberOfLines = 2
+        label.attributedText = NSMutableAttributedString(string: "You: I would greatly appreciate)", attributes: [NSAttributedString.Key.kern: -0.3])
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -84,6 +84,8 @@ class MessagesTableViewCell: UITableViewCell {
         profileImageView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 55).isActive = true
         profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+       
+        
 
         userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
@@ -91,7 +93,7 @@ class MessagesTableViewCell: UITableViewCell {
         messageLabel.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor).isActive = true
         messageLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.bottomAnchor, constant: -2).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
-        messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12).isActive = true
+       
    
         timeStampLabel.centerYAnchor.constraint(equalTo: userNameTimeStampStackView.centerYAnchor).isActive = true
         timeStampLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true

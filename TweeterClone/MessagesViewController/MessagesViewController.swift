@@ -82,7 +82,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         messageTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
         composeMessageImageButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
-        composeMessageImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60).isActive = true
+        composeMessageImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -21).isActive = true
     }
     
     func handleRegisterCell() {
