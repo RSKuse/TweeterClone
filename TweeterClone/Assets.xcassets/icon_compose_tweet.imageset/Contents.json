@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Home Solid Icon.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "icon_compose_tweet.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

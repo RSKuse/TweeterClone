@@ -20,25 +20,6 @@ class TweetsTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    lazy var twitterLogoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    lazy var featureStrokeIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .red
-        return imageView
-    }()
-    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
@@ -84,7 +65,7 @@ class TweetsTableViewCell: UITableViewCell {
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.15
         label.numberOfLines = 0
-        label.attributedText = NSMutableAttributedString(string: "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. \n\nWhat do you bring? #TellMeAboutYou", attributes: [NSAttributedString.Key.kern: -0.3, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        label.attributedText = NSMutableAttributedString(string: "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? \n#TellMeAboutYou", attributes: [NSAttributedString.Key.kern: -0.3, NSAttributedString.Key.paragraphStyle: paragraphStyle])
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -136,75 +117,6 @@ class TweetsTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    /*
-    lazy var commentsStrokeIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Comment Stroke Icon")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        //imageView.backgroundColor = .cyan
-        return imageView
-    }()
-    
-    lazy var commentsCountLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .lightGray
-        label.text = "28"
-        label.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    
-    lazy var retweetsImageButton: UIButton = {
-        let button = UIButton()
-        let icon = UIImage(named: "Retweet stroke icon")
-        button.setImage(icon, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    lazy var retweetsCountLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .lightGray
-        label.text = "5"
-        label.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-     
-    
-    lazy var likesHeartImageButton: UIButton = {
-        let button = UIButton()
-        let icon = UIImage(named: "Heart stroke icon")
-        button.setImage(icon, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    lazy var likesCountLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .lightGray
-        label.text = "21"
-        label.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-     
-    
-    lazy var shareStrokeImageButton: UIButton = {
-        let button = UIButton()
-        let icon = UIImage(named: "Share stroke icon")
-        button.setImage(icon, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
     lazy var likeHeartSolidImageButton: UIButton = {
         let button = UIButton()
         let icon = UIImage(named: "Heart Solid Icon")
@@ -213,7 +125,36 @@ class TweetsTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-     */
+    
+    lazy var likedLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
+        label.attributedText = NSMutableAttributedString(string: "Kieron Dotson and Zack John liked",
+                                                         attributes: [NSAttributedString.Key.kern: -0.15])
+        label.text = "Kieron Dotson and Zack John liked"
+        label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var likedStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [likeHeartSolidImageButton, likedLabel])
+        stackView.alignment = .leading
+        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.spacing = 8
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var downArrowIconImageButton: UIButton = {
+        let button = UIButton()
+        let icon = UIImage(named: "Down Arrow Icon")
+        button.setImage(icon, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
@@ -225,13 +166,10 @@ class TweetsTableViewCell: UITableViewCell {
         contentView.addSubview(userNameTimeStampStackView)
         contentView.addSubview(tweetLabel)
         contentView.addSubview(cellButtonsStackView)
-//        container(commentsStrokeIconImageView)
-//        addSubview(commentsCountLabel)
-//        addSubview(retweetsImageButton)
-//        addSubview(retweetsCountLabel)
-//        addSubview(likesHeartImageButton)
-//        addSubview(likesCountLabel)
-//        addSubview(shareStrokeImageButton)
+        contentView.addSubview(likedLabel)
+        contentView.addSubview(likedStackView)
+        contentView.addSubview(downArrowIconImageButton)
+
     
 
         profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor,
@@ -270,13 +208,17 @@ class TweetsTableViewCell: UITableViewCell {
         
         shareButtonView.buttonImageView.heightAnchor.constraint(equalToConstant: 15).isActive = true
         shareButtonView.buttonImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
-    
+        
+        likedStackView.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor, constant: -23).isActive = true
+        likedStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        
+        downArrowIconImageButton.rightAnchor.constraint(equalTo: tweetLabel.rightAnchor).isActive = true
+        downArrowIconImageButton.centerYAnchor.constraint(equalTo: userNameTimeStampStackView.centerYAnchor).isActive = true
     }
+    
     required init?(coder: NSCoder) {
        fatalError("init(coder:) has not been implemented")
-        
     }
-    
     
 }
 
