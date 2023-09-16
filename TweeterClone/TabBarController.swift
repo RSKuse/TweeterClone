@@ -25,7 +25,7 @@ class TabBarController: UITabBarController {
     func setupViewControllers() {
         
         // Home
-        let homeTabBarItem = UITabBarItem(title: nil,
+        let homeTabBarItem = UITabBarItem(title: "Home",
                                           image: UIImage(named: "icon_home"),
                                           selectedImage: UIImage(named: "icon_home_selected"))
         let homeViewController = UINavigationController(rootViewController: HomeViewController())
