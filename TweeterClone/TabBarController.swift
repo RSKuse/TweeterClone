@@ -38,7 +38,13 @@ class TabBarController: UITabBarController {
         let messagesController = UINavigationController(rootViewController: MessagesViewController())
         messagesController.tabBarItem = messagesTabBarItem
         
-        self.viewControllers = [homeViewController, messagesController]
+        let notificationsTabBarItem = UITabBarItem(title: "Notifications",
+                                              image: UIImage(named: "icon_notification"),
+                                              selectedImage: UIImage(named: "icon_notification_selected"))
+        let notificationsController = UINavigationController(rootViewController: NotificationViewController())
+        notificationsController.tabBarItem = notificationsTabBarItem
+        
+        self.viewControllers = [homeViewController, notificationsController, messagesController]
         
     }
 }

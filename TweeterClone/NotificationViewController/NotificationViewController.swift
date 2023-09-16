@@ -1,15 +1,15 @@
 //
-//  MessagesViewController.swift
+//  NotificationViewController.swift
 //  TweeterClone
 //
-//  Created by Reuben Simphiwe Kuse on 2023/09/12.
+//  Created by Reuben Simphiwe Kuse on 2023/09/15.
 //
 
 import UIKit
 
-class MessagesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NotificationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    lazy var messageTableView: UITableView = {
+    lazy var notificationTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
@@ -20,9 +20,9 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         return tableView
         
     }()
-    lazy var composeMessageImageButton: UIButton = {
+    lazy var composeTweetImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "icon_compose_message")
+        let icon = UIImage(named: "icon_compose_tweet")
         button.setImage(icon, for: .normal)
         button.clipsToBounds = true
         button.imageView?.contentMode = .scaleAspectFit
@@ -43,7 +43,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     
     lazy var settingIconButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "icon_setting") /// `icon_settings` `ic_settings`
+        let icon = UIImage(named: "icon_setting")
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         setupUI()
         handleRegisterCell()
-        title = "Messages"
+        title = "Notifications"
         setupNavigationBar()
     }
     
@@ -73,20 +73,20 @@ class MessagesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func setupUI() {
-        view.addSubview(messageTableView)
-        view.addSubview(composeMessageImageButton)
+        view.addSubview(notificationTableView)
+        view.addSubview(composeTweetImageButton)
        
-        messageTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        messageTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        messageTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        messageTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        notificationTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        notificationTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        notificationTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        notificationTableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
-        composeMessageImageButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
-        composeMessageImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -21).isActive = true
+        composeTweetImageButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive = true
+        composeTweetImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -21).isActive = true
     }
     
     func handleRegisterCell() {
-        messageTableView.register(MessagesTableViewCell.self, forCellReuseIdentifier: "MessagesTableViewCellID")
+        notificationTableView.register(NotificationTableViewCell.self, forCellReuseIdentifier: "NotificationTableViewCellID")
     }
 }
 
