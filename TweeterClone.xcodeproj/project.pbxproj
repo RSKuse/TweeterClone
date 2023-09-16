@@ -19,6 +19,9 @@
 		F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */; };
 		F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */; };
 		F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */; };
+		F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */; };
+		F3840D722AB4FCC800882B06 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D712AB4FCC800882B06 /* NotificationTableViewCell.swift */; };
+		F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsDatabase.swift; sourceTree = "<group>"; };
 		F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F3840D712AB4FCC800882B06 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationViewController+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			children = (
 				F3840D4F2AAAE45500882B06 /* AppDelegate.swift */,
 				45A215022AB23FA400CF57F3 /* TabBarController.swift */,
+				F3840D6E2AB4FC5200882B06 /* NotificationViewController */,
 				F3840D692AB2108700882B06 /* MessagesViewController */,
 				45A453762AAF9A6100FBB812 /* HomeViewController */,
 				F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */,
@@ -99,6 +106,16 @@
 				F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */,
 			);
 			path = MessagesViewController;
+			sourceTree = "<group>";
+		};
+		F3840D6E2AB4FC5200882B06 /* NotificationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */,
+				F3840D712AB4FCC800882B06 /* NotificationTableViewCell.swift */,
+				F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */,
+			);
+			path = NotificationViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3840D722AB4FCC800882B06 /* NotificationTableViewCell.swift in Sources */,
 				F3840D542AAAE45500882B06 /* HomeViewController.swift in Sources */,
+				F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */,
 				45A453782AAFA36D00FBB812 /* TweetCellButtonView.swift in Sources */,
+				F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */,
 				45A215032AB23FA400CF57F3 /* TabBarController.swift in Sources */,
 				45A215012AB23ACE00CF57F3 /* MessagesViewController+TableView.swift in Sources */,
 				F3840D502AAAE45500882B06 /* AppDelegate.swift in Sources */,

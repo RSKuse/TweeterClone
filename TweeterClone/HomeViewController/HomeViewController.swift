@@ -107,12 +107,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let tweetsCell = tableView.dequeueReusableCell(withIdentifier: "TweetsTableViewCellID", for: indexPath) as! TweetsTableViewCell
         return tweetsCell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let messageViewController = MessagesViewController()
-        messageViewController.hidesBottomBarWhenPushed = false // Hide the TabBar when you do a push. 
-        navigationController?.pushViewController(messageViewController, animated: true)
-    }
+
 }
 

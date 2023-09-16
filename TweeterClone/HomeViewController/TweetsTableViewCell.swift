@@ -64,7 +64,7 @@ class TweetsTableViewCell: UITableViewCell {
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.15
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         label.attributedText = NSMutableAttributedString(string: "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? \n#TellMeAboutYou", attributes: [NSAttributedString.Key.kern: -0.3, NSAttributedString.Key.paragraphStyle: paragraphStyle])
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
@@ -149,7 +149,7 @@ class TweetsTableViewCell: UITableViewCell {
     
     lazy var downArrowIconImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Down Arrow Icon")
+        let icon = UIImage(named: "icon_downward")
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
