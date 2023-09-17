@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Share Stroke icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "0c98b6d4efb93aff577ea628e3affbca.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

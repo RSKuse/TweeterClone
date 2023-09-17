@@ -50,11 +50,11 @@ class TweetsTableViewCell: UITableViewCell {
     }()
     
     lazy var userNameTimeStampStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, userNameLabel, timeStampLabel])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, twitterVerificationImageButton, userNameLabel, timeStampLabel])
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
-        stackView.spacing = 8
+        stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -82,7 +82,7 @@ class TweetsTableViewCell: UITableViewCell {
     
     lazy var retweetButtonView: TweetCellButtonView = {
         let buttonView = TweetCellButtonView()
-        buttonView.buttonImageView.image = UIImage(named: "Retweet stroke icon")
+        buttonView.buttonImageView.image = UIImage(named: "icon_retweet")
         buttonView.buttonTextLabel.text = "5"
         buttonView.translatesAutoresizingMaskIntoConstraints = false
         return buttonView
@@ -90,7 +90,7 @@ class TweetsTableViewCell: UITableViewCell {
     
     lazy var likeButtonView: TweetCellButtonView = {
         let buttonView = TweetCellButtonView()
-        buttonView.buttonImageView.image = UIImage(named: "Heart stroke icon")
+        buttonView.buttonImageView.image = UIImage(named: "icon_heart")
         buttonView.buttonTextLabel.text = "21"
         buttonView.translatesAutoresizingMaskIntoConstraints = false
         return buttonView
@@ -98,7 +98,7 @@ class TweetsTableViewCell: UITableViewCell {
     
     lazy var shareButtonView: TweetCellButtonView = {
         let buttonView = TweetCellButtonView()
-        buttonView.buttonImageView.image = UIImage(named: "Share stroke icon")
+        buttonView.buttonImageView.image = UIImage(named: "icon_share")
         buttonView.buttonTextLabel.text = ""
         buttonView.translatesAutoresizingMaskIntoConstraints = false
         return buttonView
@@ -119,7 +119,7 @@ class TweetsTableViewCell: UITableViewCell {
     
     lazy var likeHeartSolidImageButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "Heart Solid Icon")
+        let icon = UIImage(named: "icon_heart_liked")
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -155,6 +155,15 @@ class TweetsTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    lazy var twitterVerificationImageButton: UIButton = {
+        let button = UIButton()
+        let icon = UIImage(named: "icon_twitterverification_tick")
+        button.setImage(icon, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
@@ -169,6 +178,7 @@ class TweetsTableViewCell: UITableViewCell {
         contentView.addSubview(likedLabel)
         contentView.addSubview(likedStackView)
         contentView.addSubview(downArrowIconImageButton)
+        //contentView.addSubview(twitterVerificationImageButton)
 
     
 
@@ -182,6 +192,14 @@ class TweetsTableViewCell: UITableViewCell {
         userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor,
                                                          constant: 10).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
+        
+        
+        twitterVerificationImageButton.heightAnchor.constraint(equalToConstant: 14).isActive = true
+        twitterVerificationImageButton.widthAnchor.constraint(equalToConstant: 14).isActive = true
+        twitterVerificationImageButton.topAnchor.constraint(equalTo: contentView.topAnchor,
+                                              constant: 30).isActive = true
+        
+        
         
         cellButtonsStackView.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor).isActive = true
         cellButtonsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
