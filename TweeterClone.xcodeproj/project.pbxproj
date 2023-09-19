@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45726ADE2AB9F57E006CF852 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45726ADD2AB9F57E006CF852 /* ProfileModel.swift */; };
+		45726AE82ABA027A006CF852 /* Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = 45726AE72ABA027A006CF852 /* Tweets.json */; };
 		45A215012AB23ACE00CF57F3 /* MessagesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A215002AB23ACE00CF57F3 /* MessagesViewController+TableView.swift */; };
 		45A215032AB23FA400CF57F3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A215022AB23FA400CF57F3 /* TabBarController.swift */; };
 		45A453782AAFA36D00FBB812 /* TweetCellButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A453772AAFA36D00FBB812 /* TweetCellButtonView.swift */; };
@@ -15,8 +17,8 @@
 		F3840D592AAAE45700882B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3840D582AAAE45700882B06 /* Assets.xcassets */; };
 		F3840D5C2AAAE45800882B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3840D5A2AAAE45700882B06 /* LaunchScreen.storyboard */; };
 		F3840D642AABA62500882B06 /* TweetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D632AABA62500882B06 /* TweetsTableViewCell.swift */; };
-		F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */; };
-		F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */; };
+		F3840D662AAE57F900882B06 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D652AAE57F900882B06 /* TweetModel.swift */; };
+		F3840D682AAF2B6800882B06 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D672AAF2B6800882B06 /* NetworkController.swift */; };
 		F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */; };
 		F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */; };
 		F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45726ADD2AB9F57E006CF852 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		45726AE72ABA027A006CF852 /* Tweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tweets.json; sourceTree = "<group>"; };
 		45A215002AB23ACE00CF57F3 /* MessagesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesViewController+TableView.swift"; sourceTree = "<group>"; };
 		45A215022AB23FA400CF57F3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		45A453772AAFA36D00FBB812 /* TweetCellButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellButtonView.swift; sourceTree = "<group>"; };
@@ -35,8 +39,8 @@
 		F3840D5B2AAAE45700882B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3840D5D2AAAE45800882B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3840D632AABA62500882B06 /* TweetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsTableViewCell.swift; sourceTree = "<group>"; };
-		F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsModelStruct.swift; sourceTree = "<group>"; };
-		F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsDatabase.swift; sourceTree = "<group>"; };
+		F3840D652AAE57F900882B06 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		F3840D672AAF2B6800882B06 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		F3840D6A2AB21AA200882B06 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		F3840D6C2AB21AE100882B06 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45726ADC2AB9F571006CF852 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3840D652AAE57F900882B06 /* TweetModel.swift */,
+				45726ADD2AB9F57E006CF852 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45726ADF2AB9F6E2006CF852 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				45726AE72ABA027A006CF852 /* Tweets.json */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		45726AE62AB9FA16006CF852 /* NetworkController */ = {
+			isa = PBXGroup;
+			children = (
+				F3840D672AAF2B6800882B06 /* NetworkController.swift */,
+			);
+			path = NetworkController;
+			sourceTree = "<group>";
+		};
 		45A453762AAF9A6100FBB812 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +118,9 @@
 				F3840D6E2AB4FC5200882B06 /* NotificationViewController */,
 				F3840D692AB2108700882B06 /* MessagesViewController */,
 				45A453762AAF9A6100FBB812 /* HomeViewController */,
-				F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */,
-				F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */,
+				45726ADF2AB9F6E2006CF852 /* Database */,
+				45726AE62AB9FA16006CF852 /* NetworkController */,
+				45726ADC2AB9F571006CF852 /* Model */,
 				F3840D582AAAE45700882B06 /* Assets.xcassets */,
 				F3840D5A2AAAE45700882B06 /* LaunchScreen.storyboard */,
 				F3840D5D2AAAE45800882B06 /* Info.plist */,
@@ -176,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45726AE82ABA027A006CF852 /* Tweets.json in Resources */,
 				F3840D5C2AAAE45800882B06 /* LaunchScreen.storyboard in Resources */,
 				F3840D592AAAE45700882B06 /* Assets.xcassets in Resources */,
 			);
@@ -191,13 +222,14 @@
 				F3840D722AB4FCC800882B06 /* NotificationTableViewCell.swift in Sources */,
 				F3840D542AAAE45500882B06 /* HomeViewController.swift in Sources */,
 				F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */,
+				45726ADE2AB9F57E006CF852 /* ProfileModel.swift in Sources */,
 				45A453782AAFA36D00FBB812 /* TweetCellButtonView.swift in Sources */,
 				F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */,
 				45A215032AB23FA400CF57F3 /* TabBarController.swift in Sources */,
 				45A215012AB23ACE00CF57F3 /* MessagesViewController+TableView.swift in Sources */,
 				F3840D502AAAE45500882B06 /* AppDelegate.swift in Sources */,
-				F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */,
-				F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */,
+				F3840D662AAE57F900882B06 /* TweetModel.swift in Sources */,
+				F3840D682AAF2B6800882B06 /* NetworkController.swift in Sources */,
 				F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */,
 				F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */,
 				F3840D642AABA62500882B06 /* TweetsTableViewCell.swift in Sources */,

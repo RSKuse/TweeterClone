@@ -1,0 +1,48 @@
+[
+    {
+        "tweet": "dstv delicious tickets are still available, burna boy’s concert moved cause of low sales, guys this is an economic indicator 😭",
+        "date": "19092023T1737",
+        "number_of_likes": 24,
+        "number_of_retweets": 187,
+        "number_of_replies": 57,
+        "number_of_views": 987,
+        "profile": {
+            "name": "Kutloano 🦄",
+            "username": "nomy_mashego",
+            "number_of_followers": 34,
+            "number_of_following": 904,
+            "number_of_tweets": 2478,
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1535686741096546311/y04nWG9P_400x400.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/47729549/1689304157/1500x500",
+            "profile_description": "boudoir photography, corporate development / entrepreneur, thinker, technology leader, socialite, best husband, lead author ERC-721",
+            "profile_location": "Philadelphia, PA, USA",
+            "profile_website": "phor.net",
+            "profile_joined_date": "19092023T1737",
+            "is_verified": false
+        },
+        "replies": [
+            {
+                "tweet": "Kobe’s passing is really sticking w/ me in a way I didn’t expect.He was an icon, the kind of person who wouldn’t die this way. My wife compared it to Princess Di’s accident. But the end can happen for anyone at any time, & I can’t help but think of anything else lately.",
+                "date": "19092023T1737",
+                "number_of_likes": 3,
+                "number_of_retweets": 18,
+                "number_of_replies": 0,
+                "number_of_views": 45,
+                "profile": {
+                    "name": "Sizwe Dhlomo",
+                    "username": "SizweDhlomo",
+                    "number_of_followers": 2200000,
+                    "number_of_following": 198,
+                    "number_of_tweets": 1797,
+                    "profile_image_url": "https://pbs.twimg.com/profile_images/815554459233320960/Ufu75TXY_400x400.jpg",
+                    "profile_banner_url": "",
+                    "profile_description": "It all happens at its own pace, that's the beauty of it...",
+                    "profile_location": "",
+                    "profile_website": "",
+                    "profile_joined_date": "19092023T1737",
+                    "is_verified": true
+                }
+            }
+        ]
+    }
+]

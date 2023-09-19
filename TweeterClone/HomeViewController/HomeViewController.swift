@@ -9,6 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var tweetArray: [TweetModel] = []
+    var networkController = NetworkController()
+    // var database = TweetsDatabase()
+    
     lazy var twitterTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
@@ -16,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.allowsSelection = true
         tableView.separatorInset = UIEdgeInsets.zero
         tableView.register(TweetsTableViewCell.self, forCellReuseIdentifier: "TweetsTableViewCellID")
-        tableView.separatorColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1) 
+        tableView.separatorColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
         
@@ -62,6 +66,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         setupUI()
         setupNavigationBar()
+        fetchTweets()
     }
     
     func setupNavigationBar() {
@@ -84,7 +89,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setupUI() {
         view.addSubview(twitterTableView)
         view.addSubview(composeTweetImageButton)
-       
+        
         twitterTableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         twitterTableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         twitterTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -94,17 +99,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         composeTweetImageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
     }
     
-    // TODO: Move these to an extension
+}
+
+// Network/Api Extension
+extension HomeViewController {
+    func fetchTweets() {
+        
+        // 1. Fetch the Tweets from (internet) json file
+        var arrayOfTweets = networkController.generateTweets()
+        
+        // 2. Convert the Tweets to Struct and update tweetArray
+        self.tweetArray = arrayOfTweets!
+        
+        // 3. ReloadData() to update the tableView
+        twitterTableView.reloadData()
+    }
+}
+
+// TabelView Extension
+extension HomeViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return tweetArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let tweetsCell = tableView.dequeueReusableCell(withIdentifier: "TweetsTableViewCellID", for: indexPath) as! TweetsTableViewCell
+        let tweetsCell = tableView.dequeueReusableCell(withIdentifier: "TweetsTableViewCellID", for: indexPath) as! TweetsTableViewCell
+        // tweetsCell.tweetLabel.text = tweetArray[indexPath.row].tweet!
+        
+        tweetsCell.tweetData = tweetArray[indexPath.row]
         return tweetsCell
     }
 

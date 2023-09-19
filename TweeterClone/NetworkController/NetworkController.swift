@@ -8,7 +8,37 @@
 import Foundation
 import UIKit
 
+// In the future, it will be responsible for making api calls. Essentially what postman does.
+class NetworkController {
+    
+    func fetchDataFromInternet() {
+        // use a link and a method :POST to fetch the data
+    }
+    
+    
+    
+    
+    
+    // 1. Fetch Json Formatted Data and convert to Swift Data Type
+    func fetchJsonFileWithName() throws -> Data {
+        let path = Bundle.main.path(forResource: "Tweets", ofType: "json")
+        return try Data(contentsOf: URL(fileURLWithPath: path!), options: .mappedIfSafe)
+    }
+    
+    // 2. Convert Data (struct) to TweetModel(struct)
+    func generateTweets() -> [TweetModel]? {
+        do {
+            let tweetData = try fetchJsonFileWithName()
+            let tweetsResponse = try JSONDecoder().decode([TweetModel].self, from: tweetData)
+            return tweetsResponse
+        } catch {
+            return nil
+        }
+    }
 
+}
+
+/*
 class TweetsDatabase {
     var tweetsArray: [Tweet] = [Tweet(userName: "Martha Craig",
                                       handleName: "@craig_love",
@@ -59,6 +89,7 @@ class TweetsDatabase {
                                       likesIconImage: UIImage(named: "Heart stroke icon")!)]
     
 }
+*/
     
     
     

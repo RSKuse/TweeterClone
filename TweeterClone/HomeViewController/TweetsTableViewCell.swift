@@ -10,6 +10,20 @@ import UIKit
 
 class TweetsTableViewCell: UITableViewCell {
     
+    var paragraphStyle = NSMutableParagraphStyle()
+    
+    var tweetData: TweetModel? {
+        didSet {
+            paragraphStyle.lineHeightMultiple = 1.15
+            tweetLabel.attributedText = NSMutableAttributedString(string: tweetData!.tweet!,
+                                                                  attributes: [NSAttributedString.Key.kern: -0.3,
+                                                                               NSAttributedString.Key.paragraphStyle: paragraphStyle])
+            
+            nameLabel.text = tweetData?.profile?.name
+            userNameLabel.text = "@" + (tweetData?.profile?.username)!
+        }
+    }
+    
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Martha Craig")
@@ -23,7 +37,6 @@ class TweetsTableViewCell: UITableViewCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
-        label.text = "Martha Craig"
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -62,10 +75,7 @@ class TweetsTableViewCell: UITableViewCell {
     lazy var tweetLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.15
-        label.numberOfLines = 2
-        label.attributedText = NSMutableAttributedString(string: "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? \n#TellMeAboutYou", attributes: [NSAttributedString.Key.kern: -0.3, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
