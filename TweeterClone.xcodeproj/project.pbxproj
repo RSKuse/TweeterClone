@@ -22,6 +22,12 @@
 		F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */; };
 		F3840D722AB4FCC800882B06 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D712AB4FCC800882B06 /* NotificationTableViewCell.swift */; };
 		F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */; };
+		F3840D792AB779A100882B06 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D782AB779A100882B06 /* HomeViewController+TableView.swift */; };
+		F3840D7B2AB78DB700882B06 /* TwitterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D7A2AB78DB700882B06 /* TwitterDetailsViewController.swift */; };
+		F3840D7D2AB88C2900882B06 /* TweetDetailsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D7C2AB88C2900882B06 /* TweetDetailsContainerView.swift */; };
+		F3840D7F2AB88C5700882B06 /* ReplyTextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D7E2AB88C5700882B06 /* ReplyTextFieldContainerView.swift */; };
+		F3840D852AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D842AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift */; };
+		F3840D872AC0AD2D00882B06 /* TwitterDetailsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D862AC0AD2D00882B06 /* TwitterDetailsViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		F3840D6F2AB4FCA900882B06 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F3840D712AB4FCC800882B06 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationViewController+TableView.swift"; sourceTree = "<group>"; };
+		F3840D782AB779A100882B06 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		F3840D7A2AB78DB700882B06 /* TwitterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDetailsViewController.swift; sourceTree = "<group>"; };
+		F3840D7C2AB88C2900882B06 /* TweetDetailsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailsContainerView.swift; sourceTree = "<group>"; };
+		F3840D7E2AB88C5700882B06 /* ReplyTextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyTextFieldContainerView.swift; sourceTree = "<group>"; };
+		F3840D842AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterDetailsViewController+TableHeaderView.swift"; sourceTree = "<group>"; };
+		F3840D862AC0AD2D00882B06 /* TwitterDetailsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterDetailsViewController+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F3840D532AAAE45500882B06 /* HomeViewController.swift */,
+				F3840D782AB779A100882B06 /* HomeViewController+TableView.swift */,
 				F3840D632AABA62500882B06 /* TweetsTableViewCell.swift */,
 				45A453772AAFA36D00FBB812 /* TweetCellButtonView.swift */,
 			);
@@ -88,6 +101,7 @@
 				45A215022AB23FA400CF57F3 /* TabBarController.swift */,
 				F3840D6E2AB4FC5200882B06 /* NotificationViewController */,
 				F3840D692AB2108700882B06 /* MessagesViewController */,
+				F3840D752AB774FA00882B06 /* TweetViewController */,
 				45A453762AAF9A6100FBB812 /* HomeViewController */,
 				F3840D672AAF2B6800882B06 /* TweetsDatabase.swift */,
 				F3840D652AAE57F900882B06 /* TweetsModelStruct.swift */,
@@ -116,6 +130,18 @@
 				F3840D732AB4FD5C00882B06 /* NotificationViewController+TableView.swift */,
 			);
 			path = NotificationViewController;
+			sourceTree = "<group>";
+		};
+		F3840D752AB774FA00882B06 /* TweetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3840D7E2AB88C5700882B06 /* ReplyTextFieldContainerView.swift */,
+				F3840D7A2AB78DB700882B06 /* TwitterDetailsViewController.swift */,
+				F3840D862AC0AD2D00882B06 /* TwitterDetailsViewController+TableView.swift */,
+				F3840D842AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift */,
+				F3840D7C2AB88C2900882B06 /* TweetDetailsContainerView.swift */,
+			);
+			path = TweetViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,15 +217,21 @@
 				F3840D722AB4FCC800882B06 /* NotificationTableViewCell.swift in Sources */,
 				F3840D542AAAE45500882B06 /* HomeViewController.swift in Sources */,
 				F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */,
+				F3840D792AB779A100882B06 /* HomeViewController+TableView.swift in Sources */,
+				F3840D7B2AB78DB700882B06 /* TwitterDetailsViewController.swift in Sources */,
 				45A453782AAFA36D00FBB812 /* TweetCellButtonView.swift in Sources */,
 				F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */,
+				F3840D7D2AB88C2900882B06 /* TweetDetailsContainerView.swift in Sources */,
+				F3840D852AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift in Sources */,
 				45A215032AB23FA400CF57F3 /* TabBarController.swift in Sources */,
 				45A215012AB23ACE00CF57F3 /* MessagesViewController+TableView.swift in Sources */,
 				F3840D502AAAE45500882B06 /* AppDelegate.swift in Sources */,
+				F3840D7F2AB88C5700882B06 /* ReplyTextFieldContainerView.swift in Sources */,
 				F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */,
 				F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */,
 				F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */,
 				F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */,
+				F3840D872AC0AD2D00882B06 /* TwitterDetailsViewController+TableView.swift in Sources */,
 				F3840D642AABA62500882B06 /* TweetsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

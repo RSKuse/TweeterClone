@@ -39,6 +39,16 @@ class TweetsTableViewCell: UITableViewCell {
         return label
     }()
     
+//    lazy var replyLabel: UILabel = {
+//        let label = UILabel()
+//        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
+//        label.attributedText = NSMutableAttributedString(string: "Replying to @karennne", attributes: [NSAttributedString.Key.kern: -0.3])
+//        label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
+//        label.textAlignment = .right
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
+    
     lazy var timeStampLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
@@ -178,29 +188,26 @@ class TweetsTableViewCell: UITableViewCell {
         contentView.addSubview(likedLabel)
         contentView.addSubview(likedStackView)
         contentView.addSubview(downArrowIconImageButton)
-        //contentView.addSubview(twitterVerificationImageButton)
+        //contentView.addSubview(replyLabel)
 
     
 
-        profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor,
-                                               constant: 20).isActive = true
+        profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant: 20).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 55).isActive = true
-        profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor,
-                                              constant: 32).isActive = true
+        profileImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32).isActive = true
 
-        userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor,
-                                                         constant: 10).isActive = true
+        userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
+        
+//        replyLabel.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
+//        replyLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.topAnchor, constant: 10).isActive = true
         
         
         twitterVerificationImageButton.heightAnchor.constraint(equalToConstant: 14).isActive = true
         twitterVerificationImageButton.widthAnchor.constraint(equalToConstant: 14).isActive = true
-        twitterVerificationImageButton.topAnchor.constraint(equalTo: contentView.topAnchor,
-                                              constant: 30).isActive = true
-        
-        
-        
+        twitterVerificationImageButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30).isActive = true
+
         cellButtonsStackView.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor).isActive = true
         cellButtonsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
         cellButtonsStackView.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -208,12 +215,9 @@ class TweetsTableViewCell: UITableViewCell {
         
         
         tweetLabel.leftAnchor.constraint(equalTo: userNameTimeStampStackView.leftAnchor).isActive = true
-        tweetLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.bottomAnchor,
-                                        constant: 2).isActive = true
-        tweetLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,
-                                          constant: -20).isActive = true
-        tweetLabel.bottomAnchor.constraint(equalTo: cellButtonsStackView.topAnchor,
-                                           constant: -20).isActive = true
+        tweetLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.bottomAnchor, constant: 2).isActive = true
+        tweetLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
+        tweetLabel.bottomAnchor.constraint(equalTo: cellButtonsStackView.topAnchor, constant: -20).isActive = true
 
         commentsButtonView.buttonImageView.heightAnchor.constraint(equalToConstant: 15).isActive = true
         commentsButtonView.buttonImageView.widthAnchor.constraint(equalToConstant: 16).isActive = true
