@@ -18,9 +18,8 @@ extension TwitterDetailsViewController {
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tweetCell = tableView.dequeueReusableCell(withIdentifier: "TweetsTableViewCellID", for: indexPath) as!
-        TweetsTableViewCell
-        tweetCell.likedStackView.isHidden = true
+        let tweetCell = tableView.dequeueReusableCell(withIdentifier: "TweetDetailTableCellID", for: indexPath) as!
+        TweetDetailTableCell
         return tweetCell
     }
 
