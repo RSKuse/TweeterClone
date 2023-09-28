@@ -149,6 +149,16 @@ class TweetDetailsContainerView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    lazy var commentRetweetLikeShareStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [commentsButton, retweetButton, likeButton, shareButton])
+        stackView.alignment = .leading
+        stackView.distribution = .fillEqually
+        stackView.axis = .horizontal
+        stackView.spacing = 60
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
 
     lazy var retweetImageButton: UIButton = {
         let button = UIButton()
@@ -213,6 +223,7 @@ class TweetDetailsContainerView: UIView {
         addSubview(retweetButton)
         addSubview(likeButton)
         addSubview(shareButton)
+        addSubview(commentRetweetLikeShareStackView)
         addSubview(dividerView3)
         addSubview(retweetStackView)
         addSubview(downArrowIconImageButton)
@@ -245,25 +256,20 @@ class TweetDetailsContainerView: UIView {
         dividerView2.rightAnchor.constraint(equalTo: rightAnchor, constant: -14).isActive = true
         dividerView2.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
   
-        commentsButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 60).isActive = true
-        commentsButton.topAnchor.constraint(equalTo: dividerView2.bottomAnchor, constant: 13).isActive = true
         commentsButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         commentsButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
         
-        retweetButton.leftAnchor.constraint(equalTo: commentsButton.rightAnchor, constant: 60).isActive = true
-        retweetButton.topAnchor.constraint(equalTo: dividerView2.bottomAnchor, constant: 13).isActive = true
         retweetButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         retweetButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
 
-        likeButton.leftAnchor.constraint(equalTo: retweetButton.rightAnchor, constant: 60).isActive = true
-        likeButton.topAnchor.constraint(equalTo: dividerView2.bottomAnchor, constant: 13).isActive = true
         likeButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         likeButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
 
-        shareButton.leftAnchor.constraint(equalTo: likeButton.rightAnchor, constant: 60).isActive = true
-        shareButton.topAnchor.constraint(equalTo: dividerView2.bottomAnchor, constant: 13).isActive = true
         shareButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
         shareButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        commentRetweetLikeShareStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 60).isActive = true
+        commentRetweetLikeShareStackView.topAnchor.constraint(equalTo: dividerView2.bottomAnchor,constant: 13).isActive = true
         
         dividerView3.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         dividerView3.topAnchor.constraint(equalTo: shareButton.bottomAnchor, constant: 13).isActive = true
@@ -271,7 +277,7 @@ class TweetDetailsContainerView: UIView {
         dividerView3.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
 
         downArrowIconImageButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        downArrowIconImageButton.centerYAnchor.constraint(equalTo: userNameLabel.centerYAnchor).isActive = true
+        downArrowIconImageButton.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor).isActive = true
 
         retweetStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 60).isActive = true
         retweetStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true

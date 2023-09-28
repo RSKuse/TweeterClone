@@ -22,5 +22,12 @@ extension TwitterDetailsViewController {
         TweetDetailTableCell
         return tweetCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let tweetDetailsViewController = TweetDetailViewController2()
+        navigationController?.pushViewController(tweetDetailsViewController, animated: true)
+       
+    }
 
 }

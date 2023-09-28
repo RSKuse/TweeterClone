@@ -39,16 +39,6 @@ class TweetsTableViewCell: UITableViewCell {
         return label
     }()
     
-//    lazy var replyLabel: UILabel = {
-//        let label = UILabel()
-//        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
-//        label.attributedText = NSMutableAttributedString(string: "Replying to @karennne", attributes: [NSAttributedString.Key.kern: -0.3])
-//        label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
-//        label.textAlignment = .right
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
-    
     lazy var timeStampLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
@@ -74,7 +64,7 @@ class TweetsTableViewCell: UITableViewCell {
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.15
-        label.numberOfLines = 2
+        label.numberOfLines = 8
         label.attributedText = NSMutableAttributedString(string: "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? \n#TellMeAboutYou", attributes: [NSAttributedString.Key.kern: -0.3, NSAttributedString.Key.paragraphStyle: paragraphStyle])
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
@@ -188,10 +178,7 @@ class TweetsTableViewCell: UITableViewCell {
         contentView.addSubview(likedLabel)
         contentView.addSubview(likedStackView)
         contentView.addSubview(downArrowIconImageButton)
-        //contentView.addSubview(replyLabel)
-
-    
-
+        
         profileImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant: 20).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 55).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 55).isActive = true
@@ -199,11 +186,7 @@ class TweetsTableViewCell: UITableViewCell {
 
         userNameTimeStampStackView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
         userNameTimeStampStackView.topAnchor.constraint(equalTo: profileImageView.topAnchor).isActive = true
-        
-//        replyLabel.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 10).isActive = true
-//        replyLabel.topAnchor.constraint(equalTo: userNameTimeStampStackView.topAnchor, constant: 10).isActive = true
-        
-        
+
         twitterVerificationImageButton.heightAnchor.constraint(equalToConstant: 14).isActive = true
         twitterVerificationImageButton.widthAnchor.constraint(equalToConstant: 14).isActive = true
         twitterVerificationImageButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30).isActive = true
