@@ -20,17 +20,17 @@ class LinkContainerView: UIView {
         return imageView
     }()
     
-    lazy var descriptionLinkLabel : UILabel = {
+    lazy var linkDescriptionLabel : UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.078, green: 0.086, blue: 0.098, alpha: 1)
         label.attributedText = NSMutableAttributedString(string: "The Best Free Icon Packs Everyone Must Download in 2020 | GraphicM...", attributes: [NSAttributedString.Key.kern: -0.3])
-        label.numberOfLines = 5
+        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var linkTitleLabe : UILabel = {
+    lazy var linkLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
         label.attributedText = NSMutableAttributedString(string: "graphicmama.com", attributes: [NSAttributedString.Key.kern: -0.3])
@@ -38,7 +38,16 @@ class LinkContainerView: UIView {
         label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-        
+    }()
+    
+    lazy var linkStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [linkDescriptionLabel, linkLabel])
+        stackView.alignment = .leading
+        stackView.distribution = .fillProportionally
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }()
     
     override init(frame: CGRect) {
@@ -46,6 +55,7 @@ class LinkContainerView: UIView {
         backgroundColor = .white
         layer.masksToBounds = true
         layer.borderWidth = 0.33
+        layer.cornerRadius = 10
         layer.borderColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1).cgColor
         setupUI()
         
@@ -56,26 +66,21 @@ class LinkContainerView: UIView {
     
     func setupUI() {
         addSubview(linkImageView)
-        addSubview(descriptionLinkLabel)
-        addSubview(linkTitleLabe)
-  
+        addSubview(linkStackView)
 
-
+        linkImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         linkImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        linkImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
         linkImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         linkImageView.widthAnchor.constraint(equalToConstant: 80).isActive = true
 
-        descriptionLinkLabel.leftAnchor.constraint(equalTo: linkImageView.leftAnchor, constant: 10).isActive = true
-        descriptionLinkLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: 6).isActive = true
-        descriptionLinkLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -12).isActive = true
-
-        linkTitleLabe.leftAnchor.constraint(equalTo: descriptionLinkLabel.leftAnchor).isActive = true
-        linkTitleLabe.topAnchor.constraint(equalTo: descriptionLinkLabel.bottomAnchor, constant: 5).isActive = true
-        linkTitleLabe.rightAnchor.constraint(equalTo: rightAnchor, constant: -12).isActive = true
-        linkTitleLabe.bottomAnchor.constraint(equalTo: topAnchor, constant: -12).isActive = true
-        
-
+        linkStackView.leftAnchor.constraint(equalTo: linkImageView.rightAnchor,
+                                            constant: 10).isActive = true
+        linkStackView.topAnchor.constraint(equalTo: topAnchor,
+                                           constant: 6).isActive = true
+        linkStackView.bottomAnchor.constraint(equalTo: bottomAnchor,
+                                           constant: -6).isActive = true
+        linkStackView.rightAnchor.constraint(equalTo: rightAnchor,
+                                             constant: -12).isActive = true
     }
 
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TweetDetailsContainerView: UIView {
+class TweetDetailsHeaderView: UIView {
     
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -37,6 +37,7 @@ class TweetDetailsContainerView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
     lazy var userNameStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [nameLabel, userNameLabel])
         stackView.alignment = .leading
@@ -210,7 +211,6 @@ class TweetDetailsContainerView: UIView {
     }
     
     func setupUI () {
-
         addSubview(profileImageView)
         addSubview(nameLabel)
         addSubview(userNameStackView)
@@ -272,7 +272,7 @@ class TweetDetailsContainerView: UIView {
         commentRetweetLikeShareStackView.topAnchor.constraint(equalTo: dividerView2.bottomAnchor,constant: 13).isActive = true
         
         dividerView3.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        dividerView3.topAnchor.constraint(equalTo: shareButton.bottomAnchor, constant: 13).isActive = true
+        dividerView3.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         dividerView3.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         dividerView3.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
 

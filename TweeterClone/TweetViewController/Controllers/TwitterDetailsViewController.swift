@@ -10,7 +10,11 @@ import UIKit
 
 class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tweetDetailView = TweetDetailsContainerView()
+    var tableHeaderView = TweetDetailsHeaderView()
+    var tableHeaderHeight: CGFloat = 0
+    var tweets: [Tweet] = []
+    
+    var numberOfTweets = 10
     
     lazy var tweetTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
