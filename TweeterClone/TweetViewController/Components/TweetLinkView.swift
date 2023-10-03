@@ -7,14 +7,14 @@
 import Foundation
 import UIKit
 
-class LinkContainerView: UIView {
+class TweetLinkView: UIView {
     
     lazy var linkImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Rectangle")
+        imageView.image = UIImage(named: "tweetlink")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 2
-        imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -29,7 +29,7 @@ class LinkContainerView: UIView {
         return label
     }()
     
-    lazy var linkLabel: UILabel = {
+    lazy var urlLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
         label.attributedText = NSMutableAttributedString(string: "graphicmama.com", attributes: [NSAttributedString.Key.kern: -0.3])
@@ -40,7 +40,8 @@ class LinkContainerView: UIView {
     }()
     
     lazy var linkStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [linkDescriptionLabel, linkLabel])
+        let stackView = UIStackView(arrangedSubviews: [linkDescriptionLabel,
+                                                       urlLabel])
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.axis = .vertical
@@ -55,7 +56,10 @@ class LinkContainerView: UIView {
         layer.masksToBounds = true
         layer.borderWidth = 0.33
         layer.cornerRadius = 10
-        layer.borderColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1).cgColor
+        layer.borderColor = UIColor(red: 0.808, 
+                                    green: 0.835,
+                                    blue: 0.863,
+                                    alpha: 1).cgColor
         setupUI()
         
     }
@@ -74,15 +78,9 @@ class LinkContainerView: UIView {
 
         linkStackView.leftAnchor.constraint(equalTo: linkImageView.rightAnchor,
                                             constant: 10).isActive = true
-        linkStackView.topAnchor.constraint(equalTo: topAnchor,
-                                           constant: 6).isActive = true
-        linkStackView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                           constant: -6).isActive = true
+        linkStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         linkStackView.rightAnchor.constraint(equalTo: rightAnchor,
                                              constant: -12).isActive = true
-        
-  
-        
     }
 
 }

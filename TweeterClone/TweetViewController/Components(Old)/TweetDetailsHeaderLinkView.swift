@@ -10,8 +10,8 @@ import UIKit
 
 class TweetDetailsHeaderLinkView: TweetDetailsHeaderView {
     
-    lazy var tweetLinkContainerView: LinkContainerView = {
-        let view = LinkContainerView()
+    lazy var tweetLinkContainerView: TweetLinkView = {
+        let view = TweetLinkView()
         view.linkImageView.image = UIImage(named: "Rectangle")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

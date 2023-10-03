@@ -15,7 +15,7 @@ extension HomeViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -27,7 +27,32 @@ extension HomeViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let tweetDetailViewController = TwitterDetailsViewController()
         
+        if indexPath.row == 0 {
+            tweetDetailViewController.tableHeaderHeight = 490
+            tweetDetailViewController.tableHeaderView.tweetlinkView.isHidden = true
+        }
+        
+        if indexPath.row == 1 {
+            tweetDetailViewController.tableHeaderHeight = 350
+            tweetDetailViewController.tableHeaderView.tweetImageView.isHidden = true
+        }
+        
+        if indexPath.row == 2 {
+            tweetDetailViewController.tableHeaderHeight = 260
+            tweetDetailViewController.tableHeaderView.tweetlinkView.isHidden = true
+            tweetDetailViewController.tableHeaderView.tweetImageView.isHidden = true
+        }
+        
+        if indexPath.row == 3 {
+            tweetDetailViewController.tableHeaderHeight = 570
+            tweetDetailViewController.tableHeaderView.retweetView.isHidden = true
+        }
+        
+        navigationController?.pushViewController(tweetDetailViewController, animated: true)
+        
+        /*
         if indexPath.row == 0 {
             let tweetDetailViewController = TwitterDetailsViewController()
             tweetDetailViewController.tableHeaderView = TweetDetailsHeaderView()
@@ -45,6 +70,14 @@ extension HomeViewController {
             navigationController?.pushViewController(tweetDetailViewController, animated: true)
             
         } else if indexPath.row == 2 {
+            let tweetDetailViewController = TwitterDetailsViewController()
+            tweetDetailViewController.tableHeaderView = TweetHeaderView()
+            tweetDetailViewController.tableHeaderView?.tweetLabel.attributedText = NSMutableAttributedString(string: "Just met Black Coffee at the airport. Killer DJ 🇿🇦", attributes: [NSAttributedString.Key.kern: -0.7])
+            tweetDetailViewController.tableHeaderHeight = 430
+            tweetDetailViewController.numberOfTweets = 0
+            navigationController?.pushViewController(tweetDetailViewController, animated: true)
+            
+        } else if indexPath.row == 3 {
             let tweetDetailViewController = TwitterDetailsViewController()
             tweetDetailViewController.tableHeaderView = TweetImageHeaderView()
             tweetDetailViewController.tableHeaderView?.tweetLabel.attributedText = NSMutableAttributedString(string: "Must have icon collections", attributes: [NSAttributedString.Key.kern: -0.6])
@@ -73,5 +106,6 @@ extension HomeViewController {
             navigationController?.pushViewController(tweetDetailViewController, animated: true)
             
         }
+        */
     }
 }

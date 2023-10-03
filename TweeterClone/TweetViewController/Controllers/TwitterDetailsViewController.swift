@@ -10,8 +10,8 @@ import UIKit
 
 class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tableHeaderView: TweetDetailsHeaderView?
-    var tableHeaderHeight: CGFloat = 0
+    var tableHeaderView = TweetHeaderView()
+    var tableHeaderHeight: CGFloat = 500
     var tweets: [Tweet] = []
     
     var numberOfTweets = 10
@@ -26,7 +26,6 @@ class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITab
         tableView.separatorColor = UIColor(red: 0.808, green: 0.835, blue: 0.863, alpha: 1)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
-        
     }()
     
     lazy var replyDetailView: ReplyTextFieldContainerView = {
@@ -37,6 +36,7 @@ class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         title = "Tweet"
         setupUI()
         configureHeaderView()
