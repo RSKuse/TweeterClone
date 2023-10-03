@@ -15,6 +15,9 @@
 		F333B5A32AC4E77900A71338 /* LinkContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5A22AC4E77900A71338 /* LinkContainerView.swift */; };
 		F333B5CF2AC8AABC00A71338 /* TweetImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5CE2AC8AABC00A71338 /* TweetImageHeaderView.swift */; };
 		F333B5D12ACC1E0E00A71338 /* TweetPhotoLinkHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5D02ACC1E0E00A71338 /* TweetPhotoLinkHeaderView.swift */; };
+		F333B5D32ACCA97400A71338 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5D22ACCA97400A71338 /* TwitterViewController.swift */; };
+		F333B5D52ACCA9E600A71338 /* TwitterViewController+TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5D42ACCA9E600A71338 /* TwitterViewController+TableHeaderView.swift */; };
+		F333B5D72ACCAA1B00A71338 /* TwitterViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333B5D62ACCAA1B00A71338 /* TwitterViewController+TableView.swift */; };
 		F3840D502AAAE45500882B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D4F2AAAE45500882B06 /* AppDelegate.swift */; };
 		F3840D542AAAE45500882B06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3840D532AAAE45500882B06 /* HomeViewController.swift */; };
 		F3840D592AAAE45700882B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3840D582AAAE45700882B06 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		F333B5A22AC4E77900A71338 /* LinkContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkContainerView.swift; sourceTree = "<group>"; };
 		F333B5CE2AC8AABC00A71338 /* TweetImageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetImageHeaderView.swift; sourceTree = "<group>"; };
 		F333B5D02ACC1E0E00A71338 /* TweetPhotoLinkHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetPhotoLinkHeaderView.swift; sourceTree = "<group>"; };
+		F333B5D22ACCA97400A71338 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		F333B5D42ACCA9E600A71338 /* TwitterViewController+TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterViewController+TableHeaderView.swift"; sourceTree = "<group>"; };
+		F333B5D62ACCAA1B00A71338 /* TwitterViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterViewController+TableView.swift"; sourceTree = "<group>"; };
 		F3840D4C2AAAE45500882B06 /* TweeterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweeterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3840D4F2AAAE45500882B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3840D532AAAE45500882B06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
+		F333B5D82ACCAA4800A71338 /* Controllers2 */ = {
+			isa = PBXGroup;
+			children = (
+				F333B5D22ACCA97400A71338 /* TwitterViewController.swift */,
+				F333B5D42ACCA9E600A71338 /* TwitterViewController+TableHeaderView.swift */,
+				F333B5D62ACCAA1B00A71338 /* TwitterViewController+TableView.swift */,
+			);
+			path = Controllers2;
+			sourceTree = "<group>";
+		};
 		F3840D432AAAE45500882B06 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +192,7 @@
 		F3840D752AB774FA00882B06 /* TweetViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F333B5D82ACCAA4800A71338 /* Controllers2 */,
 				45573D5B2AC5FA750045EEB6 /* Controllers */,
 				45573D5C2AC5FA7B0045EEB6 /* Cell */,
 				45573D5D2AC5FA870045EEB6 /* Components */,
@@ -258,8 +275,10 @@
 				F3840D702AB4FCA900882B06 /* NotificationViewController.swift in Sources */,
 				F333B59D2AC4992500A71338 /* TweetDetailsHeaderLinkView.swift in Sources */,
 				F3840D792AB779A100882B06 /* HomeViewController+TableView.swift in Sources */,
+				F333B5D52ACCA9E600A71338 /* TwitterViewController+TableHeaderView.swift in Sources */,
 				F3840D7B2AB78DB700882B06 /* TwitterDetailsViewController.swift in Sources */,
 				45A453782AAFA36D00FBB812 /* TweetCellButtonView.swift in Sources */,
+				F333B5D32ACCA97400A71338 /* TwitterViewController.swift in Sources */,
 				F3840D742AB4FD5C00882B06 /* NotificationViewController+TableView.swift in Sources */,
 				F3840D7D2AB88C2900882B06 /* TweetDetailsHeaderView.swift in Sources */,
 				F3840D852AC0AC3B00882B06 /* TwitterDetailsViewController+TableHeaderView.swift in Sources */,
@@ -271,6 +290,7 @@
 				F3840D662AAE57F900882B06 /* TweetsModelStruct.swift in Sources */,
 				F3840D682AAF2B6800882B06 /* TweetsDatabase.swift in Sources */,
 				F3840D6B2AB21AA200882B06 /* MessagesViewController.swift in Sources */,
+				F333B5D72ACCAA1B00A71338 /* TwitterViewController+TableView.swift in Sources */,
 				F333B5A32AC4E77900A71338 /* LinkContainerView.swift in Sources */,
 				F333B5CF2AC8AABC00A71338 /* TweetImageHeaderView.swift in Sources */,
 				F3840D6D2AB21AE100882B06 /* MessagesTableViewCell.swift in Sources */,

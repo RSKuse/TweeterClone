@@ -44,7 +44,7 @@ extension HomeViewController {
             tweetDetailViewController.numberOfTweets = 0
             navigationController?.pushViewController(tweetDetailViewController, animated: true)
             
-        } else {
+        } else if indexPath.row == 2 {
             let tweetDetailViewController = TwitterDetailsViewController()
             tweetDetailViewController.tableHeaderView = TweetImageHeaderView()
             tweetDetailViewController.tableHeaderView?.tweetLabel.attributedText = NSMutableAttributedString(string: "Must have icon collections", attributes: [NSAttributedString.Key.kern: -0.6])
@@ -56,9 +56,22 @@ extension HomeViewController {
             tweetDetailViewController.tableHeaderHeight = 530
             tweetDetailViewController.numberOfTweets = 0
             navigationController?.pushViewController(tweetDetailViewController, animated: true)
-               
+            
+            
+        } else {
+            let tweetDetailViewController = TwitterViewController()
+            tweetDetailViewController.tableHeaderView = TweetPhotoLinkHeaderView()
+            tweetDetailViewController.tableHeaderView?.tweetLabel.attributedText = NSMutableAttributedString(string: "Must have icon collections", attributes: [NSAttributedString.Key.kern: -0.6])
+            tweetDetailViewController.tableHeaderView?.tweetLabel.numberOfLines = 4
+            tweetDetailViewController.tableHeaderView?.tweetLabel.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
+            tweetDetailViewController.tableHeaderView?.tweetLabel.font = UIFont(name: "SFProText-Light", size: 22)
+            tweetDetailViewController.tableHeaderView?.likesTitleLabel.attributedText = NSMutableAttributedString(string: "1 Like", attributes: [NSAttributedString.Key.kern: -0.3])
+            tweetDetailViewController.tableHeaderView?.likesTitleLabel.font = UIFont(name: "SFProText-Semibold", size: 16)
+            tweetDetailViewController.tableHeaderView?.likesTitleLabel.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
+            tweetDetailViewController.tableHeaderHeight = 616
+            tweetDetailViewController.numberOfTweets = 0
+            navigationController?.pushViewController(tweetDetailViewController, animated: true)
             
         }
-        
     }
 }

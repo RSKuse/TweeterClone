@@ -1,16 +1,16 @@
 //
-//  TwitterDetailsViewController.swift
+//  TwitterViewController.swift
 //  TweeterClone
 //
-//  Created by Reuben  Kuse on 2023/09/17.
+//  Created by Reuben Simphiwe Kuse on 2023/10/03.
 //
 
 import Foundation
 import UIKit
 
-class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TwitterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tableHeaderView: TweetDetailsHeaderView?
+    var tableHeaderView: TweetPhotoLinkHeaderView?
     var tableHeaderHeight: CGFloat = 0
     var tweets: [Tweet] = []
     
