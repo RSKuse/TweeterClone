@@ -282,6 +282,7 @@ class TweetDetailsHeaderView: UIView {
         retweetStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 60).isActive = true
         retweetStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true
         retweetStackView.bottomAnchor.constraint(equalTo:profileImageView.topAnchor, constant: -16).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

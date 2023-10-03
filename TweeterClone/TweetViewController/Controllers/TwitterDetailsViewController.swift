@@ -10,7 +10,7 @@ import UIKit
 
 class TwitterDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tableHeaderView = TweetDetailsHeaderView()
+    var tableHeaderView: TweetDetailsHeaderView?
     var tableHeaderHeight: CGFloat = 0
     var tweets: [Tweet] = []
     

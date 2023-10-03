@@ -11,9 +11,9 @@ import UIKit
 extension TwitterDetailsViewController {
 
     func sizeHeaderToFit() {
-        tableHeaderView.setNeedsLayout()
-        tableHeaderView.layoutIfNeeded()
-        tableHeaderView.frame = CGRect(origin: .zero,
+        tableHeaderView?.setNeedsLayout()
+        tableHeaderView?.layoutIfNeeded()
+        tableHeaderView?.frame = CGRect(origin: .zero,
                                        size: CGSize(width: view.frame.width, 
                                                     height: tableHeaderHeight))
         

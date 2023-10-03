@@ -1,4 +1,3 @@
-//
 //  LinkContainerView.swift
 //  TweeterClone
 //
@@ -81,6 +80,9 @@ class LinkContainerView: UIView {
                                            constant: -6).isActive = true
         linkStackView.rightAnchor.constraint(equalTo: rightAnchor,
                                              constant: -12).isActive = true
+        
+  
+        
     }
 
 }
