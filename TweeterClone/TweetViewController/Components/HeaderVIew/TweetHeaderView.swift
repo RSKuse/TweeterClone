@@ -82,43 +82,6 @@ class TweetHeaderView: UIView {
         return view
     }()
     
-    lazy var retweetsTitleLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
-        label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
-        label.textAlignment = .right
-        label.attributedText = NSMutableAttributedString(string: "6 Retweets", attributes: [NSAttributedString.Key.kern: -0.3])
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var likesTitleLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
-        label.textColor = UIColor(red: 0.408, green: 0.463, blue: 0.518, alpha: 1)
-        label.textAlignment = .right
-        label.attributedText = NSMutableAttributedString(string: "15 Likes", attributes: [NSAttributedString.Key.kern: -0.3])
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var retweetslikesStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [retweetsTitleLabel, likesTitleLabel])
-        stackView.alignment = .trailing
-        stackView.distribution = .fillProportionally
-        stackView.axis = .horizontal
-        stackView.spacing = 8
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
-    }()
-    
-    lazy var dividerView3: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 0.741, green: 0.773, blue: 0.804, alpha: 1)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
     lazy var commentsButton: UIButton = {
         let button = UIButton()
         let icon = UIImage(named: "icon_comments")
@@ -223,34 +186,6 @@ class TweetHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-    }
-    
-    func setupUI () {
-        addSubview(headerStackView)
-        addSubview(bottomLineView)
-        
-        retweetView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        
-        profileView.heightAnchor.constraint(equalToConstant: 55).isActive = true
-        profileView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        
-        tweetlinkView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        tweetImageView.heightAnchor.constraint(equalToConstant: 224).isActive = true
-        
-        timestampView.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        timestampView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        
-        numberOfReactionsView.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        numberOfReactionsView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        
-        headerStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        headerStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        headerStackView.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
-        
-        bottomLineView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        bottomLineView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        bottomLineView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        bottomLineView.heightAnchor.constraint(equalToConstant: 6).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
